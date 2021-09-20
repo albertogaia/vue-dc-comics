@@ -1,12 +1,13 @@
+@import 'brand.scss';
+@import 'mixin.scss';
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-$primary-color: #0282F8;
-$secondary-color: #222;
-$footer-color: #303030;
-
 body{font-family: 'Roboto', sans-serif}
 .container {max-width: 1170px; height:100%; margin: 0 auto;}
+
+

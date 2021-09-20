@@ -70,7 +70,7 @@ export default {
 
 .list-link{
     color: #c7c7c7; 
-    font-size: 12px; 
+    font-size: $fs-xs; 
     list-style: none;
     margin: 15px 0px;
     a {
@@ -87,8 +87,8 @@ export default {
         display: block;
         margin-bottom: 15px;
         color: white; 
-        font-size: 18px; 
-        font-weight: 600; 
+        font-size: $fs-lg; 
+        font-weight: $bold; 
     }
 }
 
@@ -124,42 +124,49 @@ export default {
 .footer-bottom{
     width: 100%; 
     height: 150px; 
-    background-color: $footer-color;
+    background-color: $dark-color;
 
     .container{
-        display: flex; 
+        @include center(vertical);
         justify-content: space-between;
-        align-items: center;
 
         button{
             border: 2px solid $primary-color;
             background-color: transparent;
             padding: 15px 25px;
-            color: white;
-            font-size: 18px;
+            color: $txt-light;
+            font-size: $fs-lg;
+            cursor: pointer;
+            transition: $medium;
+
+            &:hover{
+                background-color: $primary-color;
+                
+            }
         }
 
         .follow {
             color: $primary-color;
-            font-weight: 600;
-            font-size: 20px;
+            font-weight: $bold;
+            font-size: $fs-xl;
         }
 
         .socials{
-            display: flex;
-            align-items: center;
+            @include center(vertical);
             justify-content: space-around;
 
             .img-social{ 
                 width: 40px;
                 margin-left: 20px;
+                transition: $fast;
 
                 img{
                     width: 100%;
+                    
                 }
 
                 &:hover{
-                    filter: brightness(1.2);
+                    filter: brightness(1.3);
                 }
             }
         }

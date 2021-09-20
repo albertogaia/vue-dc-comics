@@ -23,13 +23,11 @@ export default {
     height: 150px;
 }
 
-h2{color: white;}
+h2{color: $txt-light;}
 .container{height: 100%;}
 .products{
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include centerCol(vertical);
 }
 
 </style>

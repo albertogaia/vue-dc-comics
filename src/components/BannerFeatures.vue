@@ -61,18 +61,21 @@ export default {
     height: 200px;
 
     .container{
-        display: flex;
+        @include center(vertical);
         justify-content: space-around;
-        align-items: center;
+        
     }
 }
 
 .icon {
     height: 50px;
-    display: flex;
-    align-items: center;
-    h3{font-size: 14px; color: white; font-weight: 400; margin-left: 10px;}
+    @include center(vertical);
+    cursor: pointer;    
+
+    h3{font-size: $fs-s; color: $txt-light; font-weight: $light; margin-left: 10px;}
     img{height: 100%; max-width: 60px;}
+
+
 }
 
 </style>

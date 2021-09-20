@@ -33,17 +33,29 @@ export default {
 @import "@/style/general";
 
 .header-top{height: 60px; width: 100%; background-color: $secondary-color;}
-.header-nav{height: 100px; display: flex; justify-content: space-between; align-items: center;}
+.header-nav{height: 100px; @include center(vertical); justify-content: space-between;}
 
 .logo {
   width: 70px;
   padding: 20px 0px;
-  img{width: 100%;}
+  transition: $fast;
+
+  &:hover{
+    transform: rotate(20deg);
+  }
+
+  img{
+    width: 100%;
+    }
+
 }
-.nav-items{list-style: none; display: flex; font-size: 12px; font-weight: 600; line-height: 96px;}
+.nav-items{list-style: none; display: flex; font-size: $fs-xs ; font-weight: $bold; line-height: 96px;}
 .nav-item{
   padding: 0px 15px;
   color: $secondary-color;
+  cursor: pointer;
+  transition: $fast;
+
   a{
     text-decoration: none;
     color: inherit;
@@ -55,7 +67,8 @@ export default {
   }
 
   &:hover{
-      border-bottom: 4px solid $primary-color;
+    color: $txt-blue;
+    border-bottom: 4px solid $primary-color;
   }
 
   &.active{

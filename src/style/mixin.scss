@@ -1,0 +1,32 @@
+@mixin center($type: 'both') {
+    display: flex;
+
+    @if $type == 'vertical'{
+        align-items: center;
+    }@else if $type == 'horizontal'{
+        justify-content: center;
+    }@else if $type == 'both'{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin centerCol($type: 'both') {
+    display: flex;
+    flex-direction: column;
+
+    @if $type == 'vertical'{
+        justify-content: center;
+    }@else if $type == 'horizontal'{
+        align-items: center;
+    }@else if $type == 'both'{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+// TRANSITION
+$fast: 0.2s;
+$medium: 0.5s;
+$slow: 1s;
