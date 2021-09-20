@@ -30,7 +30,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import "../style/general";
+@import "@/style/general";
 
 .header-top{height: 60px; width: 100%; background-color: $secondary-color;}
 .header-nav{height: 100px; display: flex; justify-content: space-between; align-items: center;}
@@ -52,6 +52,10 @@ export default {
       color: $primary-color;
     }
 
+  }
+
+  &:hover{
+      border-bottom: 4px solid $primary-color;
   }
 
   &.active{
