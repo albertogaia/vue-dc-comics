@@ -1,6 +1,11 @@
 <template>
-    <div>
-        <h1>PRODUCTS</h1>
+    <div class="my-content">
+        <div class="container">
+            <div class="products">
+                <h2>Content goes here</h2>
+            </div>
+            
+        </div>
     </div>
 </template>
 
@@ -11,5 +16,20 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/style/general.scss';
+
+.my-content{
+    background-color: $secondary-color;
+    height: 150px;
+}
+
+h2{color: white;}
+.container{height: 100%;}
+.products{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 </style>

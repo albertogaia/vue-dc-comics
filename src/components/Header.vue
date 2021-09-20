@@ -33,15 +33,14 @@ export default {
 @import "../style/general";
 
 .header-top{height: 60px; width: 100%; background-color: $secondary-color;}
-.header-nav{height: 100px; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid transparent}
+.header-nav{height: 100px; display: flex; justify-content: space-between; align-items: center;}
 
 .logo {
   width: 70px;
   padding: 20px 0px;
   img{width: 100%;}
 }
-.nav-menu{height: 100%;}
-.nav-items{list-style: none; display: flex; font-size: 12px; font-weight: 600; line-height: 100px;}
+.nav-items{list-style: none; display: flex; font-size: 12px; font-weight: 600; line-height: 96px;}
 .nav-item{
   padding: 0px 15px;
   color: $secondary-color;
