@@ -31,10 +31,13 @@
         <div class="footer-bottom p-tb">
             <div class="container">
                 <div class="sign-up">
-
+                    <button> SIGN-UP NOW!</button>
                 </div>
                 <div class="socials">
-
+                    <span class="follow">FOLLOW US</span>
+                    <div v-for="(social, index) in socialsLink" :key="index" class="img-social">
+                        <a :href="social.url"><img :src="require(`../assets/${social.icon}`)" :alt="social.name"></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,6 +46,7 @@
 
 <script>
 import Links from '@/assets/data/Links.js'
+import Socials from '@/assets/data/Socials.js'
 export default {
     name: 'Footer',
     data(){
@@ -51,6 +55,7 @@ export default {
             footShop : Links.footShop,
             footDC : Links.footDC,
             footSites : Links.footSites,
+            socialsLink: Socials,
         }
     }
 }
@@ -124,6 +129,40 @@ export default {
     .container{
         display: flex; 
         justify-content: space-between;
+        align-items: center;
+
+        button{
+            border: 2px solid $primary-color;
+            background-color: transparent;
+            padding: 15px 25px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .follow {
+            color: $primary-color;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .socials{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .img-social{ 
+                width: 40px;
+                margin-left: 20px;
+
+                img{
+                    width: 100%;
+                }
+
+                &:hover{
+                    filter: brightness(1.2);
+                }
+            }
+        }
     }
 }
 
