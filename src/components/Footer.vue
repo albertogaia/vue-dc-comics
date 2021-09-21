@@ -35,9 +35,7 @@
                 </div>
                 <div class="socials">
                     <span class="follow">FOLLOW US</span>
-                    <div v-for="(social, index) in socialsLink" :key="index" class="img-social">
-                        <a :href="social.url"><img :src="require(`../assets/${social.icon}`)" :alt="social.name"></a>
-                    </div>
+                    <SocialsIcons />
                 </div>
             </div>
         </div>
@@ -46,16 +44,18 @@
 
 <script>
 import Links from '@/assets/data/Links.js'
-import Socials from '@/assets/data/Socials.js'
+import SocialsIcons from '@/components/SocialsIcons.vue'
 export default {
     name: 'Footer',
+    components: {
+        SocialsIcons,
+    },
     data(){
         return{
             footDCComics : Links.footDCComics,
             footShop : Links.footShop,
             footDC : Links.footDC,
             footSites : Links.footSites,
-            socialsLink: Socials,
         }
     }
 }
@@ -154,22 +154,8 @@ export default {
         .socials{
             @include center(vertical);
             justify-content: space-around;
-
-            .img-social{ 
-                width: 40px;
-                margin-left: 20px;
-                transition: $fast;
-
-                img{
-                    width: 100%;
-                    
-                }
-
-                &:hover{
-                    filter: brightness(1.3);
-                }
-            }
         }
+    
     }
 }
 

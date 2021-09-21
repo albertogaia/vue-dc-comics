@@ -1,6 +1,11 @@
 <template>
   <header>
-      <div class="header-top"></div>
+      <div class="header-top">
+        <div class="container">
+          <SocialsIcons />
+        </div>
+        
+      </div>
       <div class="header-nav container">
         <div class="logo">
           <a href="/"><img src="@/assets/img/dc-logo.png" alt="logo.png"></a>
@@ -18,8 +23,12 @@
 
 <script>
 import Links from '@/assets/data/Links.js'
+import SocialsIcons from '@/components/SocialsIcons.vue'
 export default {
   name: 'Header',
+  components:{
+      SocialsIcons,
+  },
   data(){
     return{
       links: Links.headerLinks,
@@ -42,7 +51,16 @@ export default {
 <style scoped lang="scss">
 @import "@/style/general";
 
-.header-top{height: 60px; width: 100%; background-color: $secondary-color;}
+.header-top{
+  height: 60px; 
+  width: 100%; 
+  background-color: $secondary-color;
+
+  .container{
+     @include center(vertical); 
+     justify-content: flex-end;
+  }
+}
 .header-nav{height: 100px; @include center(vertical); justify-content: space-between;}
 
 .logo {
