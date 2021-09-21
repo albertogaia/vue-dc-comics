@@ -1,7 +1,7 @@
 <template>
     <div class="my-content">
         <div class="jumbotron">
-            <img src="@/assets/img/jumbotron.jpg" alt="jumbotron">
+            <img :src="require(`@/assets/${jumbo[0].img}`)" :alt="jumbo[0].altText">
         </div>
         <div class="container">
             <div class="current-series">
@@ -9,12 +9,14 @@
             </div>
             <div class="dc-products">
                 <ProductCard 
+                component-to-re-render
                 v-for="(product, index) in products"
                 :key="index"
                 :prod="product"
                 />
-                <button>LOAD MORE</button>
             </div>
+            <button>LOAD MORE</button>
+
         </div>
         
     </div>
@@ -23,6 +25,7 @@
 <script>
 import ProdItems from '@/assets/data/DCComics.js'
 import ProductCard from '@/components/ProductCard.vue'
+import Jumbotron from '@/assets/data/Jumbotron.js'
 export default {
     name: 'Products',
     components: {
@@ -31,8 +34,16 @@ export default {
     data(){
         return{
             products: ProdItems,
+            jumbo: Jumbotron,
         }
+    },
+    methods:{
+
+    },
+    mounted(){
+
     }
+    
 }
 </script>
 
@@ -55,6 +66,7 @@ export default {
 
     .current-series{
         position: absolute;
+        align-self: flex-start;
         top: -20px;
         display: inline-block;
         height: 40px;
@@ -71,9 +83,20 @@ export default {
         @include center(horizontal);
         flex-wrap: wrap;
         padding: 50px 0px;
-
-        @include button(colored);
     }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button{
+            width: max-content;
+            margin-bottom: 30px;
+        }
+        @include button(colored);
+
+    }
+
 }
 
 

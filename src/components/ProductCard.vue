@@ -1,18 +1,18 @@
 <template>
-  <div class="card">
-      <div class="img-card">
-          <img :src="prod.thumb" alt="">
-      </div>
-      <div class="title-card">
-          <span>{{prod.series.toUpperCase()}}</span>
-      </div>
-  </div>
+        <div class="card">
+            <div class="img-card">
+                <img :src="prod.thumb" alt="">
+            </div>
+            <div class="title-card">
+                <span>{{prod.series.toUpperCase()}}</span>
+            </div>
+        </div>
 </template>
 
 <script>
 export default {
     name: 'ProductCard',
-    props: ['prod']
+    props: ['prod'],
 }
 </script>
 
@@ -21,7 +21,7 @@ export default {
 @import '@/style/general.scss';
 
     .card{
-        flex-basis: calc(100% / 6 - 30px);
+        flex-basis: calc(100% / 4 - 30px);
         margin: 15px;
 
         .img-card{
