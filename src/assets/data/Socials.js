@@ -5,6 +5,11 @@ const socials = [
         url: '#'
     },
     {
+        name: 'Facebook',
+        icon: 'img/footer-facebook.png',
+        url: '#'
+    },
+    {
         name: 'Twitter',
         icon: 'img/footer-twitter.png',
         url: '#'

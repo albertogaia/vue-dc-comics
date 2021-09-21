@@ -2,7 +2,7 @@
     <div class="banner">
         <div class="container">
             <div class="icon" v-for="(icon, index) in icons" :key="index">
-                <img :src="require(`../assets/${icon.url + icon.path + icon.extension}`)" :alt="icon.path">
+                <img :src="require(`../assets/${icon.url + icon.path + icon.extension}`)" :alt="icon.text">
                 <h3>{{icon.text.toUpperCase()}}</h3>
             </div>
         </div>

@@ -132,16 +132,16 @@ export default {
 
         button{
             border: 2px solid $primary-color;
-            background-color: transparent;
             padding: 15px 25px;
             color: $txt-light;
             font-size: $fs-lg;
             cursor: pointer;
-            transition: $medium;
+            background: linear-gradient(to right, transparent 50%, $primary-color 50%) left;
+            background-size: 250%;
+            transition: .5s ease-out;
 
             &:hover{
-                background-color: $primary-color;
-                
+                background-position: right;
             }
         }
 

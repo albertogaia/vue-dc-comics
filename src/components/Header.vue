@@ -7,7 +7,7 @@
         </div>
         <div class="nav-menu">
           <ul class="nav-items">
-            <li v-for="(link, index) in links" :key="index" class="nav-item" :class="(link.current) ? 'active' : null">
+            <li v-for="(link, index) in links" :key="index" class="nav-item" :class="(link == currentLink) ? 'active' : null" @click="currentNav(index)">
               <a :href="link.url">{{link.text.toUpperCase()}}</a>
             </li>
           </ul>
@@ -23,7 +23,17 @@ export default {
   data(){
     return{
       links: Links.headerLinks,
+      currentLink: '',
     }
+  },
+  methods: {
+    currentNav(i){
+      let tmpLink = this.links[i];
+      this.currentLink = tmpLink;
+    }
+  },
+  mounted(){
+    this.currentLink = this.links[1];
   }
 }
 </script>
@@ -38,10 +48,11 @@ export default {
 .logo {
   width: 70px;
   padding: 20px 0px;
-  transition: $fast;
+  transition: $medium;
 
   &:hover{
-    transform: rotate(20deg);
+    transform: rotate(380deg) scale(1.1);
+
   }
 
   img{
@@ -55,7 +66,7 @@ export default {
   color: $secondary-color;
   cursor: pointer;
   transition: $fast;
-
+  border-bottom: 4px solid transparent;
   a{
     text-decoration: none;
     color: inherit;
