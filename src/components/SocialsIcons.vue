@@ -21,12 +21,11 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/style/general';
-
     .container-socials{
         display: flex;
 
         .img-social{
-            width: 40px;
+            width: 30px;
             margin-left: 20px;
             transition: $fast;
 

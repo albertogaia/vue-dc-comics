@@ -43,7 +43,8 @@
 </template>
 
 <script>
-import Links from '@/assets/data/Links.js'
+import {footDCComics, footShop, footDC, footSites} from '@/assets/data/Links.js'
+
 import SocialsIcons from '@/components/SocialsIcons.vue'
 export default {
     name: 'Footer',
@@ -52,10 +53,10 @@ export default {
     },
     data(){
         return{
-            footDCComics : Links.footDCComics,
-            footShop : Links.footShop,
-            footDC : Links.footDC,
-            footSites : Links.footSites,
+            footDCComics : footDCComics,
+            footShop : footShop,
+            footDC : footDC,
+            footSites : footSites,
         }
     }
 }
@@ -116,6 +117,7 @@ export default {
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
+                filter: drop-shadow(5px 5px 10px black);
             }
         }
     }
@@ -154,6 +156,7 @@ export default {
         .socials{
             @include center(vertical);
             justify-content: space-around;
+            --width: 40px;
         }
     
     }

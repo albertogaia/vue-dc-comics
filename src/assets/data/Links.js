@@ -165,4 +165,4 @@ const footSites = [
 ]
 
 
-export default {headerLinks , footDCComics, footShop, footDC, footSites};
+export {headerLinks , footDCComics, footShop, footDC, footSites};

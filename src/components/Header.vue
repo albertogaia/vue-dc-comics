@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Links from '@/assets/data/Links.js'
+import { headerLinks} from '@/assets/data/Links.js'
 import SocialsIcons from '@/components/SocialsIcons.vue'
 export default {
   name: 'Header',
@@ -31,7 +31,7 @@ export default {
   },
   data(){
     return{
-      links: Links.headerLinks,
+      links: headerLinks,
       currentLink: '',
     }
   },
@@ -52,7 +52,7 @@ export default {
 @import "@/style/general";
 
 .header-top{
-  height: 60px; 
+  height: 50px; 
   width: 100%; 
   background-color: $secondary-color;
 
@@ -61,7 +61,11 @@ export default {
      justify-content: flex-end;
   }
 }
-.header-nav{height: 100px; @include center(vertical); justify-content: space-between;}
+.header-nav{
+  height: 100px; 
+  @include center(vertical); 
+  justify-content: space-between;
+  }
 
 .logo {
   width: 70px;
@@ -70,7 +74,6 @@ export default {
 
   &:hover{
     transform: rotate(380deg) scale(1.1);
-
   }
 
   img{

@@ -20,32 +20,32 @@ export default {
 <style lang="scss" scoped>
 @import '@/style/general.scss';
 
-    .card{
-        flex-basis: calc(100% / 4 - 30px);
-        margin: 15px;
+.card{
+    width: calc(100% / 4 - 30px);
+    margin: 15px;
 
-        .img-card{
-            aspect-ratio: 1 / 1;
-            transition: $fast;
-            filter: brightness(0.7);
-            cursor: pointer;
+    .img-card{
+        aspect-ratio: 1 / 1;
+        transition: $fast;
+        filter: brightness(0.7);
+        cursor: pointer;
 
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: top;
-            }
-
-            &:hover{
-                filter: brightness(1.1);
-            }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
         }
 
-        .title-card{
-            color: $txt-light;
-            margin-top: 15px;
+        &:hover{
+            filter: brightness(1.1);
         }
     }
+
+    .title-card{
+        color: $txt-light;
+        margin-top: 15px;
+    }
+}
 
 </style>

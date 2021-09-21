@@ -9,7 +9,6 @@
             </div>
             <div class="dc-products">
                 <ProductCard 
-                component-to-re-render
                 v-for="(product, index) in products"
                 :key="index"
                 :prod="product"
@@ -65,18 +64,19 @@ export default {
     }
 
     .current-series{
-        position: absolute;
-        align-self: flex-start;
-        top: -20px;
         display: inline-block;
-        height: 40px;
         width: max-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-50%);
+        height: 40px;
         @include center(vertical);
 
         background-color: $primary-color;
         padding: 0px 15px;
         color: $txt-light;
-        font-size: $fs-lg;
+        font-size: $fs-xl;
     }
 
     .dc-products{
@@ -86,9 +86,7 @@ export default {
     }
     
     .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include centerCol(horizontal);
         button{
             width: max-content;
             margin-bottom: 30px;
