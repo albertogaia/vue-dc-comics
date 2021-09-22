@@ -7,13 +7,13 @@
 </template>
 
 <script>
-import Socials from '@/assets/data/Socials.js'
+import {socials} from '@/assets/data/Socials.js'
 export default {
     name: 'SocialsIcons',
 
     data(){
         return {
-            socialsLink: Socials,
+            socialsLink: socials,
         }
     }
 }
